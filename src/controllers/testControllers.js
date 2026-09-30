@@ -1,5 +1,6 @@
 const testService = require("../services/testService.js");
 
+// test
 async function getTest(req,res){
 
     console.log("Récupération des centrales");
