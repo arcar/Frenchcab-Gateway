@@ -5,7 +5,7 @@ name: Build Docker image
 on:
   push:
     branches:
-      - staging
+      - main
 
 jobs:
   build:
