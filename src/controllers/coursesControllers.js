@@ -47,4 +47,30 @@ async function getCourses(req,res){
     }
 }
 
-module.exports = {creerCourse, getCourses};
+// PATCH /courses/:id/annulation
+async function annulerCourse(req,res){
+
+    const id = Number(req.params.id);
+
+    if(!Number.isInteger(id)){
+        return res.status(400).json({
+            success:false,
+            message:"Identifiant de course invalide",
+            status:400
+        });
+    }
+
+    try{
+        const resultat = await coursesService.annulerCourse(id);
+        res.json(resultat);
+    }catch(error){
+        console.error("Erreur annulation course :", error.message);
+        res.status(error.status || 500).json({
+            success:false,
+            message:error.message,
+            status:error.status || 500
+        });
+    }
+}
+
+module.exports = {creerCourse, getCourses, annulerCourse};

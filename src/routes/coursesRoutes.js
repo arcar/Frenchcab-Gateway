@@ -5,5 +5,6 @@ const coursesControllers = require("../controllers/coursesControllers");
 
 router.get("/", coursesControllers.getCourses);
 router.post("/", coursesControllers.creerCourse);
+router.patch("/:id/annulation", coursesControllers.annulerCourse);
 
 module.exports = router;
