@@ -34,8 +34,8 @@ Demander l'accès en tant que membre à `mmorkos-cyber`, puis lire le `contribut
 Dans ce repo ont été ajouté des secrets (`DOCKERHUB_USERNAME`, `DOCKERHUB_TOKEN`), afin de pouvoir lancer le `workflows`.
 
 3. `.github`
-Dans `Frenchcab-Frontend` a été créer un dossier `github` qui contient le `workflows` avec un fichier `ci.yml`.
-Actuellement le fichier `ci.yml`, sert uniquement à lancer `docker build` et `docker push`, le Frontend n'ayant à ce stade pas de test.
+Dans `Frenchcab-Gateway` a été créé un dossier `.github` qui contient le `workflows` avec un fichier `ci.yml`.
+Le fichier `ci.yml` se déclenche sur un `push` sur la branche `dev` et lance `docker build` et `docker push`.
 
 ### 2. VM
 
