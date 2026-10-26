@@ -12,7 +12,9 @@ const testRoutes = require("./src/routes/testRoutes");
 const zonesRoutes = require("./src/routes/zonesRoutes");
 const predictionsRoutes = require("./src/routes/predictionsRoutes");
 const coursesRoutes = require("./src/routes/coursesRoutes");
+const versionRoute = require("./src/routes/versionRoute");
 
+app.use("/modele/version", versionRoute)
 app.use("/test", testRoutes)
 app.use("/zones", zonesRoutes);
 app.use("/predictions", predictionsRoutes);
