@@ -13,7 +13,7 @@ async function getVersion(req,res){
 
         res.json({
             success:true,
-            data:plants
+            data:modele
         });
 
 
