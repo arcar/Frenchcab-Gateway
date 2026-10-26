@@ -4,7 +4,7 @@ const axios = require("axios");
 
 const testService = require("../src/services/testService.js");
 
-process.env.BACKEND_URL = "http://backend:8000";
+process.env.BACKEND_URL = "http://backend:3001";
 
 afterEach(() => {
     mock.restoreAll();
@@ -17,7 +17,7 @@ test("getTests appelle BACKEND_URL/test et renvoie les données", async () => {
 
     assert.deepStrictEqual(result, { message: "ok" });
     assert.strictEqual(getMock.mock.callCount(), 1);
-    assert.strictEqual(getMock.mock.calls[0].arguments[0], "http://backend:8000/test");
+    assert.strictEqual(getMock.mock.calls[0].arguments[0], "http://backend:3001/test");
 });
 
 test("getTests lève une erreur si l'API Python est injoignable", async () => {
